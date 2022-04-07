@@ -6,7 +6,7 @@
 /*   By: agouet <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/01 15:47:06 by agouet            #+#    #+#             */
-/*   Updated: 2022/04/04 12:15:47 by agouet           ###   ########.fr       */
+/*   Updated: 2022/04/07 11:28:48 by agouet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,9 +55,8 @@ int	ft_move(t_data *data, int *direction)
 		data->heroes.position = *direction;
 		data->map.cut_map[data->heroes.position] = 'P';
 		data->heroes.count++;
-		write (1, "Movement Number: ", 17);
+		write (1, "\rMovement Number: ", 17);
 		ft_putnbr(data->heroes.count);
-		write (1, "\n", 1);
 	}
 	return (0);
 }
